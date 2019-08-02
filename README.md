@@ -21,7 +21,7 @@ Run lorax to create a Silverblue repository with embedded Flatpaks
 
 Usage:
 ``` sh
-sudo run-lorax.sh
+sudo ./run-lorax.sh
 ```
 
 Creates the following directories:
