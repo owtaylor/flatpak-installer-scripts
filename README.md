@@ -2,6 +2,19 @@ About
 =====
 Some test scripts for embedding Flatpaks into a Fedora Silverblue installer
 
+Setup
+=====
+fedora-lorax-templates (for Silverblue specified templates) and lorax (for generic templates)
+are submodules of this project. Lorax and flatpak also needs to be installed on your system.
+Hopefully the lorax submodule and the lorax code from the system install are sufficiently
+in-sync. (This is true at time of writing for F29 and F30, building an image for F31 rawhide.)
+
+``` sh
+sudo dnf install flatpak lorax
+git submodule init
+git submodule update
+```
+
 run-lorax.sh:
 =============
 Run lorax to create a Silverblue repository with embedded Flatpaks

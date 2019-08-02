@@ -1,0 +1,6 @@
+[submodule "fedora-lorax-templates"]
+	path = fedora-lorax-templates
+	url = https://pagure.io/forks/otaylor/fedora-lorax-templates.git
+[submodule "lorax"]
+	path = lorax
+	url = https://github.com/weldr/lorax.git

@@ -7,11 +7,9 @@ die() {
     exit 1
 }
 
-[ -d ../fedora-lorax-templates ] || die "Must be checked out next to fedora-lorax-templates"
+[ -d fedora-lorax-templates ] || die "Please run: git submodule init; git submodule update"
 
-templatedir=$(cd ../fedora-lorax-templates/ostree-based-installer && pwd)
-[ -f $templatedir/lorax-embed-flatpaks.tmpl ] || \
-    die "Need branch from https://pagure.io/fork/otaylor/fedora-lorax-templates/tree/embed-flatpaks"
+templatedir=$(cd fedora-lorax-templates/ostree-based-installer && pwd)
 
 rm -rf work
 mkdir work
@@ -36,6 +34,7 @@ EOF
 
 cd logs
 exec lorax \
+    --sharedir=../lorax/share \
     --workdir=../work \
     --cachedir=../cache \
     --repo=../work/Everything.repo \
